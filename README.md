@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+🚀 Инструкция по запуску тестового React-проекта
+Клонирование репозитория:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Copy code
+### `https://github.com/OkiBolat/Test-task-for-trainees.git`
 
-## Available Scripts
+Установка зависимостей:
+### `npm install`
 
-In the project directory, you can run:
-
+Запуск проекта:
+Если вы используете npm, выполните:
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🚀 Задача: Создание канбан-доски
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Цель**: Разработать канбан-доску с использованием React, Redux Toolkit и сохранение состояния в локальном хранилище.
 
-### `npm test`
+## 📌 Требования:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔹 Использование React
+- Разработать канбан-доску с использованием библиотеки **React**.
 
-### `npm run build`
+### 🔹 UI
+- Использование готового шаблона.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔹 Интерфейс и структура доски
+- Фиксированное количество столбцов.
+- Каждый столбец содержит карточки задач.
+- Возможность перетаскивания карточек между столбцами.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔹 Плавное перетаскивание
+- Добавить плавное перетаскивание карточек между столбцами с использованием библиотеки `react-beautiful-dnd`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔹 Адаптивная верстка
+- Адаптивная верстка с использованием **Chakra UI**.
 
-### `npm run eject`
+### 🔹 Сохранение состояния в локальном хранилище
+- Использование **Redux Toolkit** для хранения состояния.
+- Сохранение состояния в локальном хранилище: Использовать Redux Toolkit для хранения состояния канбан-доски в локальном хранилище браузера (localStorage или sessionStorage). Состояние доски (список столбцов и карточек в них) должно сохраняться при обновлении страницы и загрузке доски.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 Добавление и удаление карточек
+- Возможность добавления и удаления карточек внутри столбцов.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🔹 Статистика по количеству карточек
+- Отображение количества карточек возле названия каждого столбца.
+- Автоматическое обновление количества при перемещении карточек.
