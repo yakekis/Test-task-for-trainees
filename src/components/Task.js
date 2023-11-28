@@ -1,7 +1,8 @@
 import { Box, Flex, IconButton, Text } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
+import { Draggable } from 'react-beautiful-dnd';
 
-export function Task({ task, handleDelete }) {
+export function Task({ task, handleDelete,columnId }) {
   return (
     <Box
       w={'100%'}
@@ -21,7 +22,7 @@ export function Task({ task, handleDelete }) {
         icon={<DeleteIcon />}
         variant="ghost"
         size="sm"
-        onClick={() => { }}
+        onClick={(e) => handleDelete(columnId,task)}
         aria-label="Delete Task" />
     </Box>
   );

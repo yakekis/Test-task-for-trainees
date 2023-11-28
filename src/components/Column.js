@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import { Task } from './Task';
 
-export function Column({ column, tasks, columns, setColumns }) {
+export function Column({ column, tasks, setTasks,pushItem,columnId }) {
   const [isAddTaskModalOpen, setIsAddTaskModalOpen] = useState(false);
   const [currentColumnId, setCurrentColumnId] = useState(null);
-
+  const [value, setValue] = useState("");
 
   return (
     <Flex
@@ -29,7 +29,7 @@ export function Column({ column, tasks, columns, setColumns }) {
             <Box
               width={'100%'}
             >
-              <Task handleDelete={() => { }} task={task} />
+              <Task handleDelete={() => {setTasks(columnId,taskId);}} task={task} columnId={columnId} />
             </Box>
           );
         })}
@@ -48,7 +48,7 @@ export function Column({ column, tasks, columns, setColumns }) {
           <ModalBody>
             <FormControl>
               <FormLabel>Содержимое задачи</FormLabel>
-              <Input value={''} onChange={e => {}} placeholder="Введите содержимое задачи..." />
+              <Input value={value} onChange={e => {setValue(e.target.value);}} placeholder="Введите содержимое задачи..." />
             </FormControl>
           </ModalBody>
 
@@ -56,7 +56,7 @@ export function Column({ column, tasks, columns, setColumns }) {
             <Button variant="ghost" mr={3} onClick={() => setIsAddTaskModalOpen(false)}>
               Отменить
             </Button>
-            <Button colorScheme="blue" onClick={() => {}}>Добавить</Button>
+            <Button colorScheme="blue" onClick={(e) => {pushItem(columnId,value)}}>Добавить</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
